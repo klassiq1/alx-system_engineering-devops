@@ -9,12 +9,8 @@ defaults
     timeout server 50000ms
 
 frontend http_front
-    bind *:80
+    bind *:443 ssl crt /etc/letsencrypt/live/www.femnergy.tech/www.femnergy.tech.pem
     default_backend http_back
-
-frontend http_front-https
-     bind *:443 ssl crt /etc/letsencrypt/live/www.femnergy.tech/www.femnergy.tech.pem
-default_backend http_back
 
 backend http_back
     balance roundrobin
