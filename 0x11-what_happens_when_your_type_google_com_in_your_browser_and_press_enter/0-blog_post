@@ -1,0 +1,31 @@
+What happens when you type google.com in your browser and press Enter
+
+DNS Resolution:
+•	Your browser initiates a DNS resolution to convert "google.com" into an IP address. This involves querying DNS servers, which may include recursive and authoritative servers.
+2.	TCP/IP Connection:
+•	Once the IP address is obtained, your browser initiates a TCP connection to the IP address on port 443 for an encrypted connection (HTTPS). A three-way handshake is performed to establish the connection.
+3.	Firewall Checks:
+•	The connection may pass through firewalls. Firewalls ensure that the traffic complies with security policies and rules.
+4.	SSL/TLS Handshake:
+•	If using HTTPS, an SSL/TLS handshake occurs. This involves the negotiation of encryption parameters, including the exchange of public keys and the generation of session keys for secure communication.
+5.	Load Balancer:
+•	The request may be directed to a load balancer, which distributes incoming traffic across multiple servers. Google likely employs load balancing for efficient resource utilization and improved availability.
+6.	Web Server:
+•	The load balancer forwards the request to a web server. The web server handles static content (HTML, CSS, images) and may also handle initial dynamic content generation.
+7.	Application Server:
+•	If there is dynamic content or server-side processing (e.g., personalized information), the request may be forwarded to an application server. Google likely uses multiple application servers for handling different aspects of user requests.
+8.	Database Access:
+•	If the request involves retrieving data from a database (e.g., personalized search results), the application server may interact with a database server to fetch the required information.
+9.	HTTP Response:
+•	The response travels back through the application and web servers, potentially passing through the load balancer. It contains HTML, CSS, JavaScript, and other resources needed to render the Google homepage.
+10.	Rendering the Page:
+•	Your browser receives the response and starts rendering the page. It processes HTML to create the DOM, applies styles from CSS, and executes JavaScript for dynamic behavior.
+11.	Fetching Additional Resources:
+•	The browser identifies additional resources (images, stylesheets, scripts) referenced in the HTML and issues separate HTTP requests to fetch them. Some of these resources may be cached locally for future use.
+12.	Final Rendering:
+•	The browser completes rendering, and you see the fully loaded Google homepage. User interactions may trigger additional requests for real-time updates or new searches.
+13.	Connection Closure:
+•	The TCP connection may be kept open for a short period using HTTP keep-alive or closed after the content is delivered, depending on server and browser configurations.
+Throughout these steps, security measures such as encryption (HTTPS/SSL) and firewall checks help ensure the confidentiality and integrity of the data exchanged between your browser and Google's servers. Additionally, load balancing and distributed architecture contribute to scalability and reliability. Keep in mind that Google's infrastructure is highly complex, and this overview simplifies the process for better understanding.
+
+https://medium.com/@hardeyfehmie24/what-happens-when-you-type-google-com-in-your-browser-and-press-enter-1abb453f28ab
