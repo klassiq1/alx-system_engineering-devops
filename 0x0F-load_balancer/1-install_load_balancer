@@ -34,14 +34,14 @@ defaults
   timeout server 15s
   timeout http-request 10s
 
-frontend clickviral-tech-frontend
+frontend femnergy-tech-frontend
     bind *:80
-    default_backend clickviral-tech-backend
+    default_backend femnergy-tech-backend
 
-backend clickviral-tech-backend
+backend femnergy-tech-backend
     balance roundrobin
-    server 92252-web-01 100.25.13.228:80 check
-    server 92252-web-02 54.146.68.64:80 check
+    server 92252-web-01 3.84.158.98:80 check
+    server 92252-web-02 54.86.236.238:80 check
 "
 
 # shellcheck disable=SC2154
