@@ -41,7 +41,7 @@ frontend www.femnergy.tech-frontend
         default_backend femnergy-backend
 
 frontend femnergy-frontend-https
-        bind *:443 ssl crt /etc/haproxy/certs/www.femnergy.tech.pem
+        bind *:443 ssl crt /etc/letsencrypt/live/www.femnergy.tech-0002/www.femnergy.tech.pem
         http-request set-header X-Forwarded-Proto https
         default_backend femnergy-backend
 
